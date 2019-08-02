@@ -1,6 +1,6 @@
-import {editPost} from 'pages/home/functions/editPost.js';
-import {deletePost} from 'pages/home/functions/deletePost.js';
-import {getDate} from 'js/api/getDate.js';
+import {editPost} from '../functions/editPost.js';
+import {deletePost} from '../functions/deletePost.js';
+import {getDate} from '../../../js/api/getDate.js';
 
 class DisplayPosts extends HTMLElement {
     connectedCallback() {
