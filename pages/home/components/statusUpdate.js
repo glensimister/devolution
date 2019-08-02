@@ -1,6 +1,6 @@
-import {addPost} from '/pages/home/functions/addPost.js';
-import {editPost} from '/pages/home/functions/editPost.js';
-import {deletePost} from '/pages/home/functions/deletePost.js';
+import {addPost} from 'pages/home/functions/addPost.js';
+import {editPost} from 'pages/home/functions/editPost.js';
+import {deletePost} from 'pages/home/functions/deletePost.js';
 
 class StatusUpdate extends HTMLElement {
   connectedCallback() {

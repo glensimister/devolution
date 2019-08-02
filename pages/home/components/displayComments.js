@@ -1,6 +1,6 @@
-import {editComment} from '/pages/home/functions/editComment.js';
-import {deleteComment} from '/pages/home/functions/deleteComment.js';
-import {getDate} from '/js/api/getDate.js';
+import {editComment} from 'pages/home/functions/editComment.js';
+import {deleteComment} from 'pages/home/functions/deleteComment.js';
+import {getDate} from 'js/api/getDate.js';
 
 class DisplayComments extends HTMLElement {
     
