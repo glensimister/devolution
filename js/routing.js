@@ -4,7 +4,7 @@ function initializePageRouting() {
 
     function loadHomePage() {
         $('.sidebar ul li a.active').removeClass('active');
-        $(".content").load("pages/home/index.html");
+        $(".content").load("./pages/home/index.html");
         $(".breadcrumbs").html("");
     }
 
