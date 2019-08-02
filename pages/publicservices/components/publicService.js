@@ -1,4 +1,4 @@
-import {donateToService} from '/pages/publicservices/functions/donateToService.js';
+import {donateToService} from '../functions/donateToService.js';
 
 class PublicService extends HTMLElement {
     async connectedCallback() {
