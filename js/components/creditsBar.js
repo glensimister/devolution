@@ -3,8 +3,12 @@ class CreditsBar extends HTMLElement {
         let user = await API_getUserByWebId(window.webId);
         this.innerHTML = `
 <style>
+
 .grid-credits {
     font-size: 12px;
+    background: #222d32;
+    padding: 10px;
+    text-align:center;
 }
 
 .grid-credits > div:nth-child(odd) {
@@ -65,8 +69,7 @@ class CreditsBar extends HTMLElement {
     margin-right: 0;
 }
 </style>
-<div class="grid fixed-top">
-            <div class="logo"><a href="#/"><b><span>D</span>EVOLUTION</b></a></div>
+
             <div class="top-right">
                 <div class="grid-credits">
                     <div><b>SOCIAL</b> <small>CREDITS</small></div>
@@ -86,8 +89,7 @@ class CreditsBar extends HTMLElement {
                         <div>${user.cryptoBal}</div>
                     </div>
                 </div>
-            </div>
-        </div>`;
+            </div>`;
     }
 }
 
