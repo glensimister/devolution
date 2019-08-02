@@ -129,7 +129,7 @@ ul.treeview-menu {
 </style>
 <div class="animated slideInDown">
                 <ul>
-                    <li><a href="/"><span>Home</span></a></li>
+                    <li><a href="#/"><span>Home</span></a></li>
                     <li><a href="#/legal/constitutionlocal"><span>Legal</span></a></li>
                     <li><a href="#/voting/index"><span>Voting</span></a></li>
                     <li><a href="#/publicservices/index"><span>Fund Public Services</span></a></li>
