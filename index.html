@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DEVOLUTION</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <!--<link rel="stylesheet" href="css/mailbox.css">-->
+    <link rel="stylesheet" href="css/intro.css">
+    <!-- this needs to go in vendor -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/vendor/rateyo.css">
+    <link rel="stylesheet" href="css/vendor/select2.min.css">
+    <link rel="stylesheet" href="css/vendor/animate.css">
+    <link rel="stylesheet" href="css/vendor/jquery-ui.css">
+</head>
+
+<body>
+    <!--
+    <div id="introContainer">
+        <div id="intro">
+            <div class="introHeader"><span>D</span>EVOLUTION
+                <div class="tagline">THE EVOLUTION OF DECENTRALIZED GOVERNANCE</div>
+                <button class="login">LOGIN</button>
+                <button class="logout">REGISTER</button>
+            </div>
+        </div>
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+    </div>-->
+
+
+    <div id="container">
+        <credits-bar></credits-bar>
+        <div class="grid top-margin">
+            <div class="sidebar-header">MAIN NAVIGATION <a class="toggle-menu">&#9776;</a></div>
+            <top-menu></top-menu>
+            <side-menu></side-menu>
+            <div id="main">
+                <div class="breadcrumbs"></div>
+                <div class="content">
+                </div>
+            </div>
+            <div class="footer fixed-bottom">
+                <ul>
+                    <li>Ambulance/Fire/Police: <b>999 or 112</b></li>
+                    <li>Gas Emergency: <b>0800 111 999</b></li>
+                    <li>NHS Direct (24 hour): <b>0845 4647</b></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!---------- Vendor JS files -------------->
+    <script src="js/vendor/jquery-3.3.1.js"></script>
+    <script src="js/vendor/sammy-latest.min.js"></script>
+    <script src="js/vendor/select2.full.min.js"></script>
+    <script src="js/vendor/rateyo.js"></script>
+    <script src="js/vendor/jquery-ui.js"></script>
+    <script src="https://melvincarvalho.github.io/helloworld/scripts/solid-auth-client.bundle.js"></script>
+    <script src="js/vendor/rdflib.min.js"></script>
+
+    <!---------- CDN JS files -------------->
+    <script src="https://cdn.jsdelivr.net/npm/solid-file-client/dist/browser/solid-file-client.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/lib/webrtc.js"></script>
+
+
+    <!---------- Global javascript files -------------->
+    <script src="js/routing.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/api/users.js"></script>
+
+    <!-------------------------------- Web components ---------------------------------->
+
+    <!-- global -->
+    <script type="module" src="/js/components/toolBar.js"></script>
+    <script type="module" src="/js/components/creditsBar.js"></script>
+    <script type="module" src="/js/components/sideMenu.js"></script>
+    <script type="module" src="/js/components/searchBar.js"></script>
+    <script type="module" src="/js/components/topMenu.js"></script>
+
+    <!-- home -->
+    <script type="module" src="/pages/home/components/profileWidget.js"></script>
+    <script type="module" src="/pages/home/components/displayPosts.js"></script>
+    <script type="module" src="/pages/home/components/statusUpdate.js"></script>
+    <script type="module" src="/pages/home/components/displayComments.js"></script>
+
+    <!-- voting  -->
+    <script type="module" src="/pages/voting/components/listCandidates.js"></script>
+
+    <!-- public services  -->
+    <script type="module" src="/pages/publicservices/components/healthCredits.js"></script>
+    <script type="module" src="/pages/publicservices/components/educationCredits.js"></script>
+    <script type="module" src="/pages/publicservices/components/publicService.js"></script>
+
+    <!-- casino ------>
+    <script type="module" src="/pages/casino/components/slotMachine.js"></script>
+    <script type="module" src="/pages/casino/components/lottery.js"></script>
+
+    <!-- education ------------>
+    <script type="module" src="/pages/education/components/courseBuilderIntro.js"></script>
+    <script type="module" src="/pages/education/components/courseBuilderQuestions.js"></script>
+    <script type="module" src="/pages/education/components/multipleChoice.js"></script>
+    <script type="module" src="/pages/education/components/courseResults.js"></script>
+    <script type="module" src="/pages/education/components/courseDonation.js"></script>
+
+    <!-- mailbox ------------>
+    <script type="module" src="/pages/mailbox/components/composeMessage.js"></script>
+    <script type="module" src="/pages/mailbox/components/mailBox.js"></script>
+    <script type="module" src="/pages/mailbox/components/readMail.js"></script>
+
+    <!-- settings ------------>
+    <script type="module" src="/pages/settings/components/addExtension.js"></script>
+    <script type="module" src="/pages/settings/components/generalSettings.js"></script>
+    <script type="module" src="/pages/settings/components/personalData.js"></script>
+    <script type="module" src="/pages/settings/components/viewExtensions.js"></script>
+
+</body>
+
+</html>

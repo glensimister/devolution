@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SAFE Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="safesearch.css">
+    <link rel="stylesheet" href="../css/vendor/rateyo.css">
+    <link rel="stylesheet" href="../css/vendor/animate.css">
+    <link rel="stylesheet" href="jquery-ui.css">
+    <script src="../js/vendor/jquery-3.3.1.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="../js/vendor/rateyo.js"></script>
+    <script src="safesearch.js"></script>
+    <script type="module" src="/browserExtension/components/browserToolBar.js"></script>
+    <script type="module" src="/browserExtension/components/commentsPopup.js"></script>
+    <script type="module" src="/browserExtension/components/profilePopup.js"></script>
+</head>
+
+<body>
+    <div id="safe-search">
+        <div><span class="safe">SAFE</span>SEARCH</div>
+        <p>
+            <input class="fa fa-search" type="text" value="&#xf002;">
+        </p>
+        <p>The toolbar should be built into the browser to allow people to like, dislike, flag, comment and donate to content which they like.</p>
+    </div>
+
+<comments-popup></comments-popup>
+<browser-tool-bar></browser-tool-bar>
+<profile-popup></profile-popup>
+</body>
+
+</html>
