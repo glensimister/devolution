@@ -139,7 +139,7 @@ ul.treeview-menu {
                     <li><a href="#/healthcare/healthcare"><span>Healthcare</span></a></li>
                     <li><a href="#/education/education"><span>Education</span></a></li>
                     <li><a href="#/business/index"><span>Business &amp; Employment</span></a></li>
-                    <li><a target="_blank" href="/browserExtension/index.html"><span>Chrome Extension</span></a></li>
+                    <li><a target="_blank" href="browserExtension/index.html"><span>Chrome Extension</span></a></li>
 
                     <li class="treeview">
                         <a class="treeview_a">
