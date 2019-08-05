@@ -84,12 +84,16 @@ class CreditsBar extends HTMLElement {
                     <div class="ec">
                         <div>${user.educationCredits}</div>
                     </div>
-                    <div><b>${user.defaultCurrency}</b></div>
+                    <div class="defaultCurrency"><b>${user.defaultCurrency}</b></div>
                     <div class="rebate">
                         <div>${user.cryptoBal}</div>
                     </div>
                 </div>
             </div>`;
+        
+        gun.get('users').on(function(data){
+            $('.defaultCurrency b').html(data.defaultCurrency);
+        })
     }
 }
 

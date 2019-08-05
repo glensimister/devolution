@@ -1,5 +1,7 @@
 class ToolBar extends HTMLElement {
-    connectedCallback() {
+   async connectedCallback() {
+        
+        let user = await API_getUserByWebId(window.webId);
 
         this.innerHTML = `
 <style>
@@ -62,7 +64,7 @@ tool-bar input {
                         <div>0</div>
                         <div class="rateYoToolbar"></div>
                         <div>
-                            <span class="sfc">SFC</span>
+                            <span class="sfc">${user.defaultCurrency}</span>
                         </div>
                     <div><input type="number" placeholder="1"></div>
                 <div class="red"><i class="fa fa-heart"></i></div>`;

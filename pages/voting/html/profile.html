@@ -1,3 +1,4 @@
+<script type="module" src="pages/home/components/profileWidget.js"></script>
 <div class="grid-home-page">
     <div id="tabs">
         <input id="tab1" type="radio" name="tabs" checked>
@@ -85,22 +86,5 @@
             </p>
         </section>
     </div>
-    <div class="profile-summary">
-        <div>
-            <div class="rateYo"></div>
-            <h4>Loading...</h4>
-            <img src="img/default.gif" class="user-image-large animated rotateIn" alt="User Image">
-            <ul>
-                <li>Name: <a class="fullname pull-right">Loading...</a>
-                </li>
-                <li>
-                    Approval Rating: <a class="approval-rating pull-right">Loading...</a>
-                </li>
-                <li>
-                    Connections <a class="pull-right">1,322</a>
-                </li>
-            </ul>
-            <button class="btn btn-red connect">CONNECT</button>
-        </div>
-    </div>
+    <profile-widget></profile-widget>
 </div>

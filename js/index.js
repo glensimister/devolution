@@ -14,7 +14,10 @@ $(document).ready(async function () {
             window.photo = store.any($rdf.sym(webId), VCARD('hasPhoto'));
             window.fullName = store.any($rdf.sym(webId), FOAF('name'));
             window.note = store.any($rdf.sym(webId), VCARD('note'));
-            API_createUser();
+            let userExists = await gun.get('users').get('webId');
+            if (userExists !== null) {
+                API_createUser();
+            }
             // put routing in index.js
             await initializePageRouting();
             initializePlugins();
