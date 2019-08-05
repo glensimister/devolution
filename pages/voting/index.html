@@ -1,3 +1,5 @@
+<script type="module" src="pages/voting/components/listCandidates.js"></script>
+
 <div id="tabs">
     <input id="tab1" type="radio" name="tabs" checked>
 
@@ -13,7 +15,7 @@
     <label for="tab4"><i class="fa fa-circle"></i><span>Apply</span></label>
 
     <section id="content1">
-            <list-candidates></list-candidates>
+        <list-candidates></list-candidates>
     </section>
 
     <section id="content2">
@@ -24,7 +26,7 @@
     <section id="content4">
         <p>To apply for a position you need a voting weight of 1.</p>
         <p>If you get elected, a new public service will be created which uses the cryptocurrency and address from your settings.</p>
-            
+
         <div class="form-group">
             <label for="exampleInputEmail1">Position:</label>
             <select class="form-control candidate-position">
@@ -41,8 +43,8 @@
                 <option>Prison Service</option>
             </select>
         </div>
-        
-                <div class="form-group">
+
+        <div class="form-group">
             <label for="exampleInputEmail1">Catchment area:</label>
             <select class="form-control catchment-area">
                 <option>Local</option>
@@ -51,7 +53,7 @@
                 <option>International</option>
             </select>
         </div>
-        
+
         <div class="form-group">
             <label>Video</label>
             <input type="text" class="form-control" placeholder="http://www.yourvideo.com">
