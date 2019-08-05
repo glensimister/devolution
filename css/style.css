@@ -517,3 +517,11 @@ small.label-green {
 .settings {
     display: none;
 }
+
+.breadcrumbs {
+    margin-bottom: 20px;
+    border-radius: 3px;
+    padding: 5px 10px 0 10px;
+    border: 1px solid #eee;
+    display:none;
+}

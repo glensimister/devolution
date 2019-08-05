@@ -5,7 +5,7 @@ function initializePageRouting() {
     function loadHomePage() {
         $('.sidebar ul li a.active').removeClass('active');
         $(".content").load("pages/home/index.html");
-        $(".breadcrumbs").html("");
+        $(".breadcrumbs").hide();
     }
 
     function splitPageString(page) {
@@ -31,7 +31,7 @@ function initializePageRouting() {
             $(".content").load(page, function () {
                 $('.sidebar').find('a[href="#/' + page + '"]').addClass('active');
             });
-            $(".breadcrumbs").html("");
+            $(".breadcrumbs").hide();
         });
         this.get('#/:folder/:page', function () {
             $('.sidebar ul li a.active').removeClass('active');
@@ -43,7 +43,7 @@ function initializePageRouting() {
             $(".content").load(pageUrl, function () {
                 $('.sidebar').find('' + menuItem + '').addClass('active');
             });
-            $(".breadcrumbs").html("");
+            $(".breadcrumbs").hide();
         });
         this.get('#/:folder/:subfolder/:page', function () {
             $('.sidebar ul li a.active').removeClass('active');
@@ -58,6 +58,7 @@ function initializePageRouting() {
 
             //breadcrumbs
             let backButton = `<div class="back" onclick="history.back()"><i class="fa fa-caret-left"></i><span>Back</span>|<span>${splitPageString(page)}</span></div>`;
+            $(".breadcrumbs").show();
             $(".breadcrumbs").html(backButton);
         });
     });
