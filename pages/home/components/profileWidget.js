@@ -1,9 +1,7 @@
 class ProfileWidget extends HTMLElement {
     async connectedCallback() {
 
-        /****************** CSS STYLES ****************/
-
-        let css = `
+        this.innerHTML = `
 <style>
 .profile-summary > div {
     text-align: center;
@@ -36,11 +34,7 @@ class ProfileWidget extends HTMLElement {
     border: 2px solid #848484;
     border-radius: 50%;
 }
-</style>`;
-
-        /****************** HTML ****************/
-
-        this.innerHTML = `${css}
+</style>
 <div class="profile-summary"><div>
             <div class="rateYo"></div>
             <h4 id="fullName">${window.fullName.value}</h4>

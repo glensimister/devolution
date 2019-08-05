@@ -2,6 +2,7 @@ class listCandidates extends HTMLElement {
     async connectedCallback() {
         
         let user = await API_getUserByWebId(window.webId);
+        let approvalRating = (user.profileScore * 2) * 10;
 
         this.innerHTML += `
 <style>
@@ -33,7 +34,7 @@ list-candidates div,
                   <p class="position">${user.position}</p>
                     <p>National</p>
                   <img src="${window.photo.value}" class="user-image-large animated rotateIn" alt="User Image">
-                  <p>Approval rating: <b class="approval-rating">${user.approvalRating}</b></p>
+                  <p>Approval rating: <b class="approval-rating">${approvalRating}%</b></p>
 
                 <p><button title="${user.pubKey}" class="btn btn-red">ELECT</button></p>
                   <div class="grid-votes">
