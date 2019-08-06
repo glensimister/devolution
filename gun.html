@@ -1,0 +1,99 @@
+<html>
+  <body>
+    <h1>Todos</h1>
+
+    <ul></ul>
+
+    <form><input><button>Add</button></form>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <script>
+      var todos = Gun().get('todos')
+      var form = $('form')
+      form.on('submit', function (event) {
+        var input = form.find('input')
+        todos.set({title: input.val()})
+        input.val('')
+        event.preventDefault()
+      })
+
+      todos.map().on(function (todo, id) {
+        // Check if the todo element already exists.
+        // This can happen because GUN sometimes sends mulitple change events for the same item.
+        var li = $('#' + id)
+        // Does is not yet exist?
+        if (!li.get(0)) {
+          // Create it.
+          // Set the id to the GUN id of the item.
+          // GUN automatically creates id's for all items.
+          // Finally set the new todo element to the end of the list.
+          li = $('<li>').attr('id', id).appendTo('ul')
+        }
+        // (It sends null if it was removed from GUN.)
+        if (todo) {
+          // Create an element with the title of the GUN item in it.
+          var html = '<span onclick="clickTitle(this)">' + todo.title + '</span>'
+          // Add a checkbox in front and check it if the GUN item has a done state.
+          html = '<input type="checkbox" onclick="clickCheck(this)" ' + (todo.done ? 'checked' : '') + '>' + html
+          // Add a trashcan icon and make it clickable.
+          html += '<img onclick="clickDelete(this)" src="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-x.svg"/>'
+          // Set it to the element.
+          li.html(html)
+        } else {
+          // The item was removed from GUN, because we got null.
+          li.remove()
+        }
+      })
+
+      // What to do when a todo's text is clicked.
+      function clickTitle (element) {
+        // Get the (jQuery) element of the text.
+        element = $(element)
+        // Check if the element does not yet contain an input field.
+        // So we will only add one input field when clicked multiple times.
+        if (!element.find('input').get(0)) {
+          // Turn the elements text into an input.
+          element.html('<input value="' + element.html() + '" onkeyup="keypressTitle(this)">')
+        }
+      }
+
+      // What to do when Enter is pressed while editing a todo.
+      function keypressTitle (element) {
+        // Is Enter pressed?
+        if (event.keyCode === 13) {
+          // Get the GUN item with the id that we store in the element.
+          // And tell GUN to update the title of the todo item.
+          todos.get($(element).parent().parent().attr('id')).put({title: $(element).val()})
+        }
+      }
+
+      // What to do when a checkbox is clicked.
+      function clickCheck (element) {
+        // Set the done state of the GUN todo item.
+        // Notice that we do not need to put the full object (including it's title state).
+        // GUN will only change the done property of the item and leaves the other properties (like title) intact.
+        todos.get($(element).parent().attr('id')).put({done: $(element).prop('checked')})
+      }
+
+      // What to do when a trashcan is clicked.
+      function clickDelete (element) {
+        // In GUN the way to delete an item, is to set it's value to null.
+        // This is because of how graph databases, like GUN, work internally.
+        todos.get($(element).parent().attr('id')).put(null)
+      }
+    </script>
+
+    <!-- Just some minimal styling. -->
+    <style>
+      ul { padding: 0; }
+      li { display: flex; }
+      li span { width: 150px; word-break: break-all; }
+      img { height: 20px; margin-left: 8px; cursor: pointer; }
+      input { width: 150px; margin-right: 8px; }
+      input[type='checkbox'] { width: auto; }
+    </style>
+  </body>
+</html>
