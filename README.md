@@ -1,6 +1,6 @@
 <h3>DEVOLUTION</h3>
 
-<h3>You can view a <a href="https://glensimister.github.io/devolution/">DEMO</a> here.</h3>
+<h3>You can view a <a href="https://glensimister.github.io/devolution/">DEMO</a> here although you will need a Solid Pod to login.</h3>
 <p>
 There's also a youtube video...
 </p>
