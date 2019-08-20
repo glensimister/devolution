@@ -1,13 +1,22 @@
-import {editPost} from '../functions/editPost.js';
-import {deletePost} from '../functions/deletePost.js';
-import {getDate} from '../../../js/api/getDate.js';
+import {
+    editPost
+}
+from '../functions/editPost.js';
+import {
+    deletePost
+}
+from '../functions/deletePost.js';
+import {
+    getDate
+}
+from '../../../js/api/getDate.js';
 
 class DisplayPosts extends HTMLElement {
     connectedCallback() {
-        
+
         editPost();
         deletePost();
-        
+
         this.innerHTML = `
 <style>
 .post,
@@ -51,23 +60,10 @@ class DisplayPosts extends HTMLElement {
 .post-desc {
     margin-top: 10px;
 }
-.comment {
-    margin-top: 10px;
-    padding: 10px;
-    border: 5px solid #eee;
-    border-radius: 4px;
-}
+
 .post-body {
     padding: 20px;
 }
-
-/*
-display-comments .post-body {
--webkit-box-shadow: inset 0px 9px 17px -16px rgba(0,0,0,1);
--moz-box-shadow: inset 0px 9px 17px -16px rgba(0,0,0,1);
-box-shadow: inset 0px 9px 17px -16px rgba(0,0,0,1);
-}
-*/
 
 .post span a:first-child {
     font-weight: bold;
@@ -111,6 +107,3 @@ customElements.define('display-posts', DisplayPosts);
     }
 
 ************************************************/
-
-
-
