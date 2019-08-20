@@ -2,7 +2,7 @@ $(document).ready(async function () {
     
     window.webId = "glensimister.github.com/profile";
     window.name = "Glen Simister";
-    window.photo = "img/profilePic.jpg";
+    window.photo = "img/profilepic.jpg";
 
     await initializePageRouting();
     initializePlugins();
