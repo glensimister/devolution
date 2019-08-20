@@ -37,7 +37,7 @@ class PublicService extends HTMLElement {
                 <h3><a href="#/voting/html/profile?id=${user.pubKey}">${user.position}</a></h3>
                 <ul class="funds-raised">
                     <li>
-                        Official<b class="pull-right"><a href="#/voting/html/profile?id=${user.pubKey}">${window.fullName}</a></b>
+                        Official<b class="pull-right"><a href="#/voting/html/profile?id=${user.pubKey}">${window.name}</a></b>
                     </li>
                     <li>
                         Monthly target<b class="pull-right"><span class="monthlyTarget">2000</span> ${user.defaultCurrency}</b>

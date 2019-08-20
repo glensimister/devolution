@@ -88,9 +88,9 @@ box-shadow: inset 0px 9px 17px -16px rgba(0,0,0,1);
                     <i class="fa fa-fw fa-close delete-post"></i>
                     <i class="fa fa-fw fa-pencil edit-post"></i>
                     <div class="post-body">
-                    <img src="${window.photo.value}" class="user-image-medium" alt="User Image">
-                    <span><a class="webId" >${window.fullName.value}</a><br /><span class="date">${getDate()}</span></span>
-                    <div class="post-desc">${window.note.value}</div></div>
+                    <img src="../img/profilePic.jpg" class="user-image-medium" alt="User Image">
+                    <span><a class="webId" >Glen Simister</a><br /><span class="date">${getDate()}</span></span>
+                    <div class="post-desc">Hello and welcome to Devolution, or "Devo" for short. Devo is a decentralized goverance model.</div></div>
                             <tool-bar></tool-bar>
                     <display-comments></display-comments>
                     <div class="post-comment">

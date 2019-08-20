@@ -93,9 +93,7 @@ side-menu ul li a:hover {
     color: #dd4b39;
     border-left: 3px solid #dd4b39;
 }
-side-menu ul li .active {
-    font-family: 'OpenSans-Bold', sans-serif;
-}
+
 side-menu ul.treeview-menu li span:nth-child(1):before {
     font-family: fontawesome;
     font-weight: normal;

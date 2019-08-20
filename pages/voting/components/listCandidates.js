@@ -30,10 +30,10 @@ list-candidates div,
 <div id="${user.pubKey}" class="${user.elected}">
                   <i class="fa fa-fw fa-close delete-official"></i>
                   <div class="rateYo"></div>
-                  <h4><a href="#/voting/html/profile?id=${user.pubKey}&status=candidate">${window.fullName.value}</a></h4>
+                  <h4><a href="#/voting/html/profile?id=${user.pubKey}&status=candidate">${window.name}</a></h4>
                   <p class="position">${user.position}</p>
                     <p>National</p>
-                  <img src="${window.photo.value}" class="user-image-large animated rotateIn" alt="User Image">
+                  <img src="${window.photo}" class="user-image-large animated rotateIn" alt="User Image">
                   <p>Approval rating: <b class="approval-rating">${approvalRating}%</b></p>
 
                 <p><button title="${user.pubKey}" class="btn btn-red">ELECT</button></p>

@@ -3,8 +3,10 @@
 function initializePageRouting() {
 
     function loadHomePage() {
-        $('.sidebar ul li a.active').removeClass('active');
-        $(".content").load("pages/home/index.html");
+        $('side-menu ul li a.active').removeClass('active');
+        $(".content").load("pages/home/index.html", function(){
+            $('side-menu').find('a[href="#/"]').addClass('active');
+        });
         $(".breadcrumbs").hide();
     }
 
@@ -26,34 +28,34 @@ function initializePageRouting() {
             loadHomePage()
         });
         this.get('#/:page', function () {
-            $('.sidebar ul li a.active').removeClass('active');
+            $('side-menu ul li a.active').removeClass('active');
             let page = `pages/${this.params['page']}.html`;
             $(".content").load(page, function () {
-                $('.sidebar').find('a[href="#/' + page + '"]').addClass('active');
+                $('side-menu').find('a[href="#/' + page + '"]').addClass('active');
             });
             $(".breadcrumbs").hide();
         });
         this.get('#/:folder/:page', function () {
-            $('.sidebar ul li a.active').removeClass('active');
+            $('side-menu ul li a.active').removeClass('active');
             let folder = this.params['folder'];
             let page = this.params['page'];
             let pageUrl = `pages/${folder}/${page}.html`;
             let menuItem = `a[href="#/${folder}/${page}"]`;
 
             $(".content").load(pageUrl, function () {
-                $('.sidebar').find('' + menuItem + '').addClass('active');
+                $('side-menu').find('' + menuItem + '').addClass('active');
             });
             $(".breadcrumbs").hide();
         });
         this.get('#/:folder/:subfolder/:page', function () {
-            $('.sidebar ul li a.active').removeClass('active');
+            $('side-menu ul li a.active').removeClass('active');
             let folder = this.params['folder'];
             let subfolder = this.params['subfolder'];
             var page = this.params['page'];
             let pageUrl = `pages/${folder}/${subfolder}/${page}.html`;
             let menuItem = `a[href="#/${folder}/${page}"]`;
             $(".content").load(pageUrl, function () {
-                $('.sidebar').find('' + menuItem + '').addClass('active');
+                $('side-menu').find('' + menuItem + '').addClass('active');
             });
 
             //breadcrumbs

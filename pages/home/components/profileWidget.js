@@ -37,10 +37,10 @@ class ProfileWidget extends HTMLElement {
 </style>
 <div class="profile-summary"><div>
             <div class="rateYo"></div>
-            <h4 id="fullName">${window.fullName.value}</h4>
+            <h4 id="fullName">Glen Simister</h4>
             <div class="profile-pic">
                 <!-- the image needs to be cropped and centered -->
-                <img src="${window.photo.value}" class="user-image-large animated rotateIn" alt="User Image">
+                <img src="../img/profilePic.jpg" class="user-image-large animated rotateIn" alt="User Image">
             </div>
 
             <ul>
@@ -81,7 +81,7 @@ class ProfileWidget extends HTMLElement {
         let user = await API_getUserByWebId(window.webId);
 
         $(".rateYo").rateYo({
-            rating: user.profileScore,
+            rating: "4",
             fullStar: true,
             starWidth: "20px",
             readOnly: true
