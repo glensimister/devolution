@@ -84,7 +84,7 @@ class DisplayPosts extends HTMLElement {
                     <i class="fa fa-fw fa-close delete-post"></i>
                     <i class="fa fa-fw fa-pencil edit-post"></i>
                     <div class="post-body">
-                    <img src="../img/profilePic.jpg" class="user-image-medium" alt="User Image">
+                    <img src="${window.photo}" class="user-image-medium" alt="User Image">
                     <span><a class="webId" >Glen Simister</a><br /><span class="date">${getDate()}</span></span>
                     <div class="post-desc">Hello and welcome to Devolution, or "Devo" for short. Devo is a decentralized goverance model.</div></div>
                             <tool-bar></tool-bar>

@@ -26,7 +26,7 @@ class DisplayComments extends HTMLElement {
                     <i data-type="" class="fa fa-fw fa-close delete-comment"></i>
                     <i data-type="" class="fa fa-fw fa-pencil edit-comment"></i>
                         <div class="post-body">
-                            <img src="../img/profilePic.jpg" class="user-image-medium" alt="User Image">
+                            <img src="${window.photo}" class="user-image-medium" alt="User Image">
                             <span><a href="">Glen Simister</a><br />${getDate()}</span>
                             <div class="comment">Looks good! What stack are you using?</div>
                         </div>

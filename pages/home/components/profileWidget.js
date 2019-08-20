@@ -40,7 +40,7 @@ class ProfileWidget extends HTMLElement {
             <h4 id="fullName">Glen Simister</h4>
             <div class="profile-pic">
                 <!-- the image needs to be cropped and centered -->
-                <img src="../img/profilePic.jpg" class="user-image-large animated rotateIn" alt="User Image">
+                <img src="${window.photo}" class="user-image-large animated rotateIn" alt="User Image">
             </div>
 
             <ul>
