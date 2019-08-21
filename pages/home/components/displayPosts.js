@@ -1,21 +1,14 @@
-import {
-    editPost
-}
-from '../functions/editPost.js';
-import {
-    deletePost
-}
-from '../functions/deletePost.js';
-import {
-    getDate
-}
-from '../../../js/api/getDate.js';
+import {editPost} from '../functions/editPost.js';
+import {deletePost} from '../functions/deletePost.js';
+import {getDate} from '../../../js/api/getDate.js';
+import {API_readProfile} from '../../../js/api/profileData.js';
 
 class DisplayPosts extends HTMLElement {
-    connectedCallback() {
-
-        editPost();
-        deletePost();
+    async connectedCallback() {
+            let profile = await API_readProfile();
+            console.log(profile.posts[0]);
+            editPost();
+            deletePost();
 
         this.innerHTML = `
 <style>
@@ -84,9 +77,9 @@ class DisplayPosts extends HTMLElement {
                     <i class="fa fa-fw fa-close delete-post"></i>
                     <i class="fa fa-fw fa-pencil edit-post"></i>
                     <div class="post-body">
-                    <img src="${window.photo}" class="user-image-medium" alt="User Image">
-                    <span><a class="webId" >Glen Simister</a><br /><span class="date">${getDate()}</span></span>
-                    <div class="post-desc">Hello and welcome to Devolution, or "Devo" for short. Devo is a decentralized goverance model.</div></div>
+                    <img src="${profile.picture}" class="user-image-medium" alt="User Image">
+                    <span><a class="webId" >${profile.name}</a><br /><span class="date">${profile.posts[0].date}</span></span>
+                    <div class="post-desc">${profile.posts[0].intro} <a href="">Read more...</a></div></div>
                             <tool-bar></tool-bar>
                     <display-comments></display-comments>
                     <div class="post-comment">
