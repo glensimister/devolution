@@ -1,5 +1,10 @@
+import {API_readProfile} from '../../../js/api/profileData.js';
+
 class ProfileWidget extends HTMLElement {
+    
     async connectedCallback() {
+        
+        let profile = await API_readProfile();
 
         this.innerHTML = `
 <style>
@@ -40,7 +45,7 @@ class ProfileWidget extends HTMLElement {
             <h4 id="fullName">Glen Simister</h4>
             <div class="profile-pic">
                 <!-- the image needs to be cropped and centered -->
-                <img src="${window.photo}" class="user-image-large animated rotateIn" alt="User Image">
+                <img src="${profile.picture}" class="user-image-large animated rotateIn" alt="User Image">
             </div>
 
             <ul>
@@ -78,7 +83,7 @@ class ProfileWidget extends HTMLElement {
 
         /************ get users score from localstorage (gun.js) *****************/
 
-        let user = await API_getUserByWebId(window.webId);
+        //let user = await API_getUserByWebId(window.webId);
 
         $(".rateYo").rateYo({
             rating: "4",
