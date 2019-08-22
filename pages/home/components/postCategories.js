@@ -32,6 +32,7 @@ post-categories .select2-container--default .select2-selection--multiple .select
 </style>
 
                         <select>
+                            <option>-- All Categories --</option>
                             <option>Anouncements</option>
                             <option>Ideas</option>
                             <option>Devolution</option>
