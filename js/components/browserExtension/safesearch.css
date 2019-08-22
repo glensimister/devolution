@@ -15,6 +15,7 @@
     font-family: 'OpenSans-Italic';
     src: URL('../fonts/OpenSans-Italic.ttf') format('truetype');
 }
+
 body {
     font-family: 'OpenSans-Regular';
     color: #848484;
@@ -46,6 +47,7 @@ h2 {
     color: #848484;
 }
 .grid-browser-toolbar {
+    background:#fff;
     display: grid;
     position: fixed;
     bottom: 0;

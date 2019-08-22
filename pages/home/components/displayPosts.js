@@ -6,7 +6,6 @@ import {API_readProfile} from '../../../js/api/profileData.js';
 class DisplayPosts extends HTMLElement {
     async connectedCallback() {
             let profile = await API_readProfile();
-            console.log(profile.posts[0]);
             editPost();
             deletePost();
 
