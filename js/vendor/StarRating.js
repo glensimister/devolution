@@ -1,3 +1,6 @@
+//https://github.com/GeekLaunch/star-rating
+// https://www.youtube.com/watch?v=r7Yv4O4wAwI
+
 class StarRating extends HTMLElement {
     get value () {
         return this.getAttribute('value') || 0;

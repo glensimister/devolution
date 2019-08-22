@@ -44,6 +44,7 @@ profile-widget ul li {
 }
 profile-widget x-star-rating {
     font-size: 28px;
+    margin-bottom: 10px;
 }
 </style>
 
