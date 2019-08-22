@@ -1,3 +1,5 @@
+#profileWidget, #commentsBox {display:none;}
+
 .grid-browser-toolbar {
     background:#fff;
     display: grid;

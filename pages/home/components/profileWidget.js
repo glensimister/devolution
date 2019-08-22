@@ -9,6 +9,10 @@ class ProfileWidget extends HTMLElement {
 
         let profile = await API_readProfile();
 
+         /*const shadowRoot = this.attachShadow({
+            mode: 'open'
+        });*/
+        
         this.innerHTML = `
 <style>
 profile-widget {

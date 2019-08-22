@@ -31,7 +31,10 @@ class BrowserToolBar extends HTMLElement {
         <div class="red"><i class="fa fa-heart"></i></div>
     </div>
 
+<div id="profileWidget">
 <profile-widget></profile-widget>
+</div>
+
 <div id="commentsBox">
 <status-update></status-update>
 <display-posts></display-posts>
@@ -48,7 +51,7 @@ class BrowserToolBar extends HTMLElement {
         });
 
         $('browser-tool-bar .user-image-small').on('click', function () {
-            $('profile-widget').dialog({
+            $('#profileWidget profile-widget').dialog({
                 title: "Author",
                 draggable: false,
                 width: "300px"
