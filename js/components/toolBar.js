@@ -53,6 +53,9 @@ tool-bar select {
 tool-bar input {
     width: 40px;
 }
+tool-bar x-star-rating {
+    font-size: 15px;
+}
 
 </style>
 
@@ -62,7 +65,7 @@ tool-bar input {
                         <div>10</div>
                         <div class="red"><i class="fa fa-flag"></i></div>
                         <div>0</div>
-                        <div class="rateYoToolbar"></div>
+                        <div><x-star-rating value="${user.profileScore}" number="5"></x-star-rating></div>
                         <div>
                             <span class="sfc">${user.defaultCurrency}</span>
                         </div>

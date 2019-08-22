@@ -9,7 +9,6 @@ class BrowserToolBar extends HTMLElement {
 <link rel="stylesheet" href="js/components/browserExtension/font-awesome.min.css">
 <link rel="stylesheet" href="js/components/browserExtension/safesearch.css">
 <link rel="stylesheet" href="js/components/browserExtension/jquery-ui.css">
-<link rel="stylesheet" href="js/components/browserExtension/ionicons.min.css">
 <link rel="stylesheet" href="js/components/browserExtension/StarRating.css">
 <script src="js/components/browserExtension/jquery-3.3.1.js"></script>
 <script src="js/components/browserExtension/jquery-ui.js"></script>

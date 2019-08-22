@@ -1,16 +1,17 @@
 x-star-rating {
     font-family: 'Ionicons';
-    font-size: 48px;
     display: inline-flex;
     cursor: pointer;
+    padding: 0 5px;
 }
 
 x-star-rating > .star::after {
-    content: '\f3ae';
-    color: #777;
+    content: '\f2fc';
+    color: #848484;
 }
 
 x-star-rating > .star.full::after {
     content: '\f2fc';
-    color: #fd0;
+    color: #e08e0b;
 }
+

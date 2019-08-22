@@ -1,14 +1,17 @@
-import {API_readProfile} from '../../../js/api/profileData.js';
+import {
+    API_readProfile
+}
+from '../../../js/api/profileData.js';
 
 class ProfileWidget extends HTMLElement {
-    
+
     async connectedCallback() {
-        
+
         let profile = await API_readProfile();
 
         this.innerHTML = `
 <style>
-.profile-summary > div {
+profile-widget {
     text-align: center;
     padding: 20px;
     margin-bottom:20px;
@@ -18,15 +21,15 @@ class ProfileWidget extends HTMLElement {
     -moz-box-shadow: inset 0px 0px 33px -1px rgba(238, 238, 238, 0.47);
     box-shadow: inset 0px 0px 33px -1px rgba(238, 238, 238, 0.47);
 }
-.profile-summary h4#fullName {
+profile-widget h4#fullName {
     text-transform: capitalize;
 }
 
-.profile-summary ul {
+profile-widget ul {
     text-align: left;
     margin-bottom: 20px;
 }
-.profile-summary ul li {
+profile-widget ul li {
     border-bottom: 1px solid #eee;
     line-height: 30px;
     display: block;
@@ -39,9 +42,12 @@ class ProfileWidget extends HTMLElement {
     border: 2px solid #848484;
     border-radius: 50%;
 }
+profile-widget x-star-rating {
+    font-size: 28px;
+}
 </style>
-<div class="profile-summary"><div>
-            <div class="rateYo"></div>
+
+            <x-star-rating value="3" number="5"></x-star-rating>
             <h4 id="fullName">Glen Simister</h4>
             <div class="profile-pic">
                 <!-- the image needs to be cropped and centered -->
@@ -63,8 +69,7 @@ class ProfileWidget extends HTMLElement {
                 </li>
             </ul>
             <button class="btn btn-red connect">CONNECT</button>
-        </div>
-    </div>`;
+        </div>`;
 
         /*************** EVENT HANDLERS *******************/
 
