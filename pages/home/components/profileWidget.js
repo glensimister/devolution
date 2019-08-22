@@ -86,18 +86,6 @@ profile-widget x-star-rating {
                 }
             });
         });
-
-        /************ get users score from localstorage (gun.js) *****************/
-
-        //let user = await API_getUserByWebId(window.webId);
-
-        $(".rateYo").rateYo({
-            rating: "4",
-            fullStar: true,
-            starWidth: "20px",
-            readOnly: true
-        });
-
     }
 
 }
