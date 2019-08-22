@@ -2,10 +2,10 @@
 
 class BrowserToolBar extends HTMLElement {
     connectedCallback() {
-        const shadowRoot = this.attachShadow({
+        /*const shadowRoot = this.attachShadow({
             mode: 'open'
-        });
-        shadowRoot.innerHTML = `
+        });*/
+        this.innerHTML = `
 <link rel="stylesheet" href="js/components/browserExtension/font-awesome.min.css">
 <link rel="stylesheet" href="js/components/browserExtension/safesearch.css">
 <link rel="stylesheet" href="js/components/browserExtension/jquery-ui.css">
@@ -29,7 +29,31 @@ class BrowserToolBar extends HTMLElement {
         <div>100</div>
         <div><input type="number" placeholder="0.01"></div>
         <div class="red"><i class="fa fa-heart"></i></div>
-    </div>`;
+    </div>
+
+<profile-widget></profile-widget>
+<div id="commentsBox">
+<status-update></status-update>
+<display-posts></display-posts>
+</div>`;
+
+        $('.fa-commenting').on('click', function () {
+            $('#commentsBox').dialog({
+                title: "Comments",
+                draggable: true,
+                width: 700,
+                maxHeight: 400,
+                height: 400
+            });
+        });
+
+        $('browser-tool-bar .user-image-small').on('click', function () {
+            $('profile-widget').dialog({
+                title: "Author",
+                draggable: false,
+                width: "300px"
+            });
+        });
     }
 }
 
