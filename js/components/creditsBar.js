@@ -5,10 +5,19 @@ class CreditsBar extends HTMLElement {
 <style>
 
 .grid-credits {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr 1fr);
+    grid-row-gap: 10px;
     font-size: 12px;
     background: #222d32;
     padding: 10px;
     text-align:center;
+}
+
+@media screen and (max-width: 800px) {
+    .grid-credits {
+        grid-template-columns: repeat(2, 2fr 1fr);
+    } 
 }
 
 .grid-credits > div:nth-child(odd) {
@@ -18,10 +27,17 @@ class CreditsBar extends HTMLElement {
 }
 
 .grid-credits > div:nth-child(even) {
-    margin-right: 10px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     font-weight: bold;
+}
+
+.grid-credits > div:nth-child(even) {
+    margin-right: 5px;
+}
+
+.grid-credits > div:nth-child(odd) {
+    margin-left: 5px;
 }
 
 .grid-credits > div:nth-child(1) {
@@ -66,7 +82,6 @@ class CreditsBar extends HTMLElement {
     background-color: #fff;
     color: #008d4c;
     padding: 5px;
-    margin-right: 0;
 }
 </style>
 
@@ -90,8 +105,8 @@ class CreditsBar extends HTMLElement {
                     </div>
                 </div>
             </div>`;
-        
-        gun.get('users').on(function(data){
+
+        gun.get('users').on(function (data) {
             $('.defaultCurrency b').html(data.defaultCurrency);
         })
     }

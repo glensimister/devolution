@@ -19,11 +19,6 @@
     display: block;
     cursor: pointer;
 }
-.grid-credits {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr 1fr);
-    grid-row-gap: 10px;
-}
 
 .grid-status-update-reminder {
     display: grid;
@@ -94,9 +89,6 @@ list-candidates > div {
     }
     list-candidates {
         grid-template-columns: repeat(4, 1fr);
-    }
-    .grid-credits {
-        grid-template-columns: repeat(4, 2fr 1fr);
     }
     .grid-status-update-reminder {
         grid-template-columns: repeat(4, 2fr 1fr);

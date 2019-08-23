@@ -1,5 +1,11 @@
 TO DO LIST
 
+* put all api functions in same file
+* shift as many css style into web components as possible
+* write some FAQ's which will make up the dummy content
+* in the profile application, change the login to a popup. When logged in, the other menu items will appear. 
+* do some research into different login solutions
+* do some research into netlify/AWS lambda. Perhaps I can ask users to register an account, and install the profile. This will interact with devolution.
 * get rid of all instances of rateYo
 * add photos to photos tab
 * change connections to friends to be more consistent with other platforms
@@ -21,10 +27,9 @@ TO DO LIST
 * remove product search. This will be done through plugins (ebay, amazon etc.)
 * sort out slot machine/lottery functionality
 * remove news page + link. This will be a part of the main news feed.
-* add sub categories to home page select box (e.g. NEWS > POLITICS > UK > ETC)
-*
-*
-*
+* add sub categories to home page select box (e.g. NEWS > POLITICS > UK > ETC) 
+* change responsive menu to select box + sort out all other responsive stuff
+* change media queries to "mobile last" cos i'm getting confused. 
 *
 *
 *
