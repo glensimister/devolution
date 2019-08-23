@@ -1,4 +1,7 @@
 <script type="module" src="pages/home/components/profileWidget.js"></script>
+<script type="module" src="pages/home/components/displayPosts.js"></script>
+
+
 <div class="grid-home-page">
     <div id="tabs">
         <input id="tab1" type="radio" name="tabs" checked>
@@ -26,12 +29,12 @@
         </section>
 
         <section id="content3">
-            <h3>Submit a review</h3>
+            <h3>Submit A Review</h3>
             <div class="form-group">
                 <div class="rateYoLeft"></div>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Title: e.g. Good company to work for!" />
+                <input type="text" class="form-control" placeholder="e.g. I've known this guy for about 10 years. I think we should elect him because..." />
             </div>
             <div class="form-group">
                 <textarea rows="3" class="form-control"></textarea>
@@ -39,51 +42,23 @@
             <div class="form-group">
                 <button class="btn btn-blue">SUBMIT</button>
             </div>
-            <div class="post-feed">
-                <div class="post">
-                    <div class="post-body">
-                        <div class="rateYoLeft"></div>
-                        <img src="img/profilepic.jpg" class="user-image-medium" alt="User Image">
-                        <span><a href="">Keep up the good work!</a><br />Guest User | 20 July, 2018</span>
-                        <div class="post-desc">BTW there's a pot hole on 4th ave, please take a look.</div>
-                    </div>
-                    <div class="grid-toolbar">
-                        <div class="red"><i class="fa fa-thumbs-o-up"></i></div>
-                        <div>90</div>
-                        <div class="blue"><i class="fa fa-thumbs-o-down"></i></div>
-                        <div>10</div>
-                        <div class="red"><i class="fa fa-flag"></i></div>
-                        <div>0</div>
-                        <div class="rateYoToolbar"></div>
-                        <div>
-                            <span class="sfc">SFC</span>
-                        </div>
-                        <div>
-                            <input type="number" placeholder="1">
-                        </div>
-                        <div class="red"><i class="fa fa-heart"></i></div>
-                    </div>
-                    <div class="post-comment">
-                    </div>
-                    <input type="text" class="post-comment-input" placeholder="Write a comment..." />
-                </div>
-            </div>
+            <display-posts></display-posts>
         </section>
         <section id="content4">
-            <p>
-                Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
-            </p>
-            <p>
-                Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
-            </p>
-        </section>
-        <section id="content5">
-            <p>
-                Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
-            </p>
-            <p>
-                Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
-            </p>
+            <h3>Submit A Review</h3>
+            <div class="form-group">
+                <div class="rateYoLeft"></div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="e.g. Working for Bob has been an interesting experience. I have learned a lot about..." />
+            </div>
+            <div class="form-group">
+                <textarea rows="3" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-blue">SUBMIT</button>
+            </div>
+            <display-posts></display-posts>
         </section>
     </div>
     <profile-widget></profile-widget>
