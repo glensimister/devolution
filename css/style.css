@@ -13,7 +13,8 @@
 body {
     font-family: 'OpenSans-Regular', sans-serif;
     font-weight: 400;
-    color: #848484;
+    /*color: #848484;*/
+    color:#222d32;
     line-height: 1.5;
     font-size: 14px;
 }
