@@ -1,0 +1,47 @@
+{
+    "posts": [{
+            "author": "Guest User",
+            "postDate": "10/08/79",
+            "body": "Welcome to Devolution, or 'Devo' for short. Devo is an open-source decentralised governance model. Any money that goes into Devo is redistributed in the form of Social Credits. You can use these credits to finance various activities on the platform. As you can see, it has sections for voting, financing public services, sitting/building courses, job search, collectively buying/renting land/houses, and basically anything else we need to govern ourselves."
+    },
+        {
+            "author": "Guest User",
+            "postDate": "10/08/79",
+            "body": "Sounds great! In what way is it decentralised?"
+    },
+        {
+            "author": "Guest User",
+            "postDate": "10/08/79",
+            "body": "Good question. To start with, users have complete control over their data. By that I mean users have a profile, which is separate from Devo. Here is a link to demo profile: https://glensimister.github.io/profile/login.html. You can log into Devo using this profile. Devo will request access to the profile data, and providing it is given, it will load your public data, including your posts, comments, photos, likes, shares, etc. At the time of writing, data will be aggregated using a lightweight, distributed, in-browser database called GunDB. GunDB will not actually store the users profile data, but will instead store a reference to the data. For example, a record containing a post will store the post ID and a userID. It will lookup the userID, find the URL of their profile, and then retreive the post, based on the ID. Devo will only use cryptocurrencies and 'smart contracts' for dealing with financial transations."
+    },
+        {
+
+            "author": "Guest User",
+            "postDate": "10/08/79",
+            "body": "OK. But where are these profiles stored? Don't they have to be stored on a centralized server?"
+    },
+        {
+            "author": "Guest User",
+            "postDate": "10/08/79",
+            "body": "For now, yes! However, the data in your profile is all public. Additionally, you can store this profile anywhere you want. As such it is unlikely that anyone hosting your data will try to sell it, as they would need thousands of records in order for it to profitable."
+              },
+        {
+            "author": "Guest User",
+            "postDate": "10/08/79",
+            "body": "What's the incentive for people to host your profile?"
+    },
+        {
+            "author": "Guest User",
+            "postDate": "10/08/79",
+            "body": "So, as mentioned, any money that goes into the application gets redistributed in the form of Social Credits. You can use these Social Credits to finance various things within the application. One of those things could be a hosting service. For example, I could run a server hosting the profile application (link above) and then setup a public service inside Devo. As an incentive for me to host other people profiles I can receive Social Credits in the form of a donation. Alternatively you could host your profile on a service like Netlify, AWS, and so on. "
+    },
+        {
+            "author": "Guest User",
+            "postDate": "10/08/79",
+            "body": "How does money go into the application?"
+    }, {
+            "author": "Guest User",
+            "postDate": "10/08/79",
+            "body": "The main revenue will come from land/housing rentals. We can start off with a crowdfunding project. We then use the proceeds to build a community. Think about a small holiday resort with approximately 10 mobile homes and a club house. Using Devo, people can rent these homes, and thus we have a small but consistant 'tax' revenue. They will pay a rent, which be based on the value of the land - similar to a Land Value Tax (LVT). On top of that, they will pay a rent for the mobile home - with the option to buy it. Of course, advertising revenue will be redistributed to all users in the form of Social Credits. There are also additional fees that could be implemented at a later date, such as pay-to-vote/pay-to-post etc. Revenue could also come from the lottery/casino. Naturally, one of the hardest things about starting a social media platform is gaining adoption. That's the tricky part. If the platform is widely adopted, there will be plenty of ways to generate a revenue stream."
+    }]
+}

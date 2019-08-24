@@ -1,5 +1,6 @@
 TO DO LIST
 
+* style browser toolbar profile dialog 
 * put all api functions in same file
 * shift as many css style into web components as possible
 * write some FAQ's which will make up the dummy content

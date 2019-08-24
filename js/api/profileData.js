@@ -6,3 +6,12 @@ export function API_readProfile() {
         });
     });
 }
+
+export function API_readSampleData() {
+    const endpoint = 'sampleData/posts.json';
+    return new Promise(resolve => {
+        $.getJSON(endpoint, function (res) {
+            resolve(res);
+        });
+    });
+}
