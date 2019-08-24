@@ -1,11 +1,10 @@
 TO DO LIST
 
 DEVOLUTION 
+* try to get rid of jquery so that the web components have less dependancies
 * style browser toolbar profile dialog 
 * put all api functions in same file
 * shift as many css style into web components as possible
-* write some FAQ's which will make up the dummy content
-* in the profile application, change the login to a popup. When logged in, the other menu items will appear. 
 * do some research into different login solutions
 * do some research into netlify/AWS lambda. Perhaps I can ask users to register an account, and install the profile. This will interact with devolution.
 * get rid of all instances of rateYo
@@ -13,12 +12,11 @@ DEVOLUTION
 * change connections to friends to be more consistent with other platforms
 * make ratings unwritable (remove hover/click)
 * make voting box look better
-* research about how to add perameters to web components
+* research about how to add parameters to web components
 * implement "apply" functionality in voting section
 * change some photos in land section
-* add info icon for documentation
 * update housing section to include panels with infinity mirrors. Will need to download sketchup.  
-* make "next" button work on course builder 
+* make "next" button work on course builder
 * make web components for course reviews/profile views etc (add stars inside component)
 * make tabs more responsive
 * add breadcrumbs to education section
