@@ -37,9 +37,7 @@
     display: block;
     cursor: pointer;
 }
-.grid-browser-toolbar .rateYoToolbar {
-    padding: 3px 20px;
-}
+
 .safe {
     font-family: 'OpenSans-Bold';
     color: #00acd6;

@@ -2,7 +2,7 @@ class ProfilePopup extends HTMLElement {
     connectedCallback() {
 
         this.innerHTML = `<div class="profile-summary">
-        <div class="rateYo"></div>
+        <x-star-rating value="3" number="5"></x-star-rating>
         <h4 id="fullName">Bob Smith</h4>
         <div class="profile-pic">
             <!-- the image needs to be cropped and centered -->
@@ -19,13 +19,6 @@ class ProfilePopup extends HTMLElement {
                 draggable: false,
                 width: "300px"
             });
-            $(".rateYo").rateYo({
-                rating: 3.6,
-                fullStar: true,
-                starWidth: "20px",
-                readOnly: true
-            });
-        });
     }
 }
 

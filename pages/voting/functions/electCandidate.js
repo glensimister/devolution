@@ -68,7 +68,6 @@
         }
 
         $('div#' + key + ' .approval-rating').html(percentageString);
-        $('div#' + key).find(".rateYo").rateYo("rating", percentageString);
 
         var position = $('div#' + key + ' .position').text();
         var name = $('div#' + key + ' h4 a').text();

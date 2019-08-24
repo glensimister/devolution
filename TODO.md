@@ -1,6 +1,8 @@
 TO DO LIST
 
 DEVOLUTION 
+* clear out all unused pages (html, css, JS)
+* improve favicon
 * try to get rid of jquery so that the web components have less dependancies
 * style browser toolbar profile dialog 
 * put all api functions in same file

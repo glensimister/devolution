@@ -29,7 +29,7 @@ list-candidates div,
 </style>
 <div id="${user.pubKey}" class="${user.elected}">
                   <i class="fa fa-fw fa-close delete-official"></i>
-                  <div class="rateYo"></div>
+                  <x-star-rating value="${user.profileScore}" number="5"></x-star-rating>
                   <h4><a href="#/voting/html/profile?id=${user.pubKey}&status=candidate">${window.name}</a></h4>
                   <p class="position">${user.position}</p>
                     <p>National</p>
@@ -44,12 +44,6 @@ list-candidates div,
                       <div>${user.downVotesByUser}</div>
                   </div>
               </div>`;
-        $(".rateYo").rateYo({
-            rating: user.profileScore,
-            fullStar: true,
-            starWidth: "20px",
-            readOnly: true
-        });
     }
 }
 

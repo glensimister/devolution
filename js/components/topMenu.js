@@ -1,43 +1,44 @@
 class TopMenu extends HTMLElement {
     connectedCallback() {
 
-        $(document.body).on('click', 'top-menu ul li.has-dropdown > a', function (e) {
-            e.preventDefault();
-            e.stopImmediatePropagation();
-            $(this).parent().siblings().find('.dropdown-content').hide();
-            $(this).parent().find('.dropdown-content').fadeToggle('fast');
-            close_dropdown(true);
-        });
-
-        function close_dropdown(is_dropdown_open) {
-            $('body').click(function (e) {
+        $(function () {
+            $(document.body).on('click', 'top-menu ul li.has-dropdown > a', function (e) {
+                e.preventDefault();
                 e.stopImmediatePropagation();
-                if (is_dropdown_open) {
-                    $('.dropdown-content').fadeOut('slow');
-                }
-            });
-        }
-
-        $('.fa-info-circle').click(async function () {
-            $('#info-box').dialog({
-                title: "Information",
-                draggable: true,
-                width: 700
+                $(this).parent().siblings().find('.dropdown-content').hide();
+                $(this).parent().find('.dropdown-content').fadeToggle('fast');
+                close_dropdown(true);
             });
 
-            let path = window.location.hash.substr(1).split("/");
-            path = path[1];
-            $("#info-box").load(`sampleData/${path}.html`, function (response, status, xhr) {
-                if (status == "error") {
-                    $("#info-box").html("There is currently no documentation for this section.");
-                }
-            });
-        });
+            function close_dropdown(is_dropdown_open) {
+                $('body').click(function (e) {
+                    e.stopImmediatePropagation();
+                    if (is_dropdown_open) {
+                        $('.dropdown-content').fadeOut('slow');
+                    }
+                });
+            }
 
-        /*
+            $('.fa-info-circle').click(async function () {
+                $('#info-box').dialog({
+                    title: "Information",
+                    draggable: true,
+                    width: 700
+                });
+
+                let path = window.location.hash.substr(1).split("/");
+                path = path[1];
+                $("#info-box").load(`sampleData/${path}.html`, function (response, status, xhr) {
+                    if (status == "error") {
+                        $("#info-box").html("There is currently no documentation for this section.");
+                    }
+                });
+            });
+            /*
         $('.fa-sign-out').on("click", async function () {
             window.location.replace("login.html");
         }); */
+        });
 
         this.innerHTML = `
 <style>

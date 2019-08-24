@@ -39,9 +39,6 @@ tool-bar > div.blue {
         color: #e08e0b;
     }*/
 
-tool-bar .rateYoToolbar {
-    padding: 3px 20px;
-}
 
 tool-bar input,
 tool-bar select {
@@ -96,12 +93,6 @@ tool-bar x-star-rating {
                 count++;
                 elem.html(count);
             }
-
-            $(".rateYoToolbar").rateYo({
-                rating: 4,
-                starWidth: "15px",
-                readOnly: true
-            });
         });
     }
 }

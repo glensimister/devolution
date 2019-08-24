@@ -19,7 +19,7 @@ async function listCandidates() {
             }
             var candidate = `<div id="${item.key}" class="${isElected}">
                   <i class="fa fa-fw fa-close delete-official"></i>
-                  <div class="rateYo"></div>
+                  <x-star-rating value="3" number="5"></x-star-rating>
                   <h4><a href="#/voting/html/profile?id=${item.key}&status=candidate">${item.value.name}</a></h4>
                   <p class="position">${item.value.position}</p>
                     <p>National</p>
@@ -39,11 +39,6 @@ async function listCandidates() {
             } else if (item.value.elected) {
                 $('.localOfficials').append(candidate);
             }
-            $(".rateYo").rateYo({
-                rating: item.value.approvalRating,
-                starWidth: "20px",
-                readOnly: true
-            });
         });
     }
 }

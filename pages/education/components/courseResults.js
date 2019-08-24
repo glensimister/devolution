@@ -4,7 +4,7 @@ class CourseResults extends HTMLElement {
             <div>
                 <h1>Congratulations! You scored <span>100/100</span></h1>
                 <h4>Please take a few minutes to review the course.</h4>
-                <div class="rateYoCourse" style="margin:0 auto 20px auto"></div>
+                <x-star-rating value="3" number="5"></x-star-rating>
                 <div class="clearfix" style="width:400px; margin:auto;">
                     <label>Leave Feedback</label>
                     <div class="form-group">
