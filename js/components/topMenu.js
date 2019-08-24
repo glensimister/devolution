@@ -18,6 +18,22 @@ class TopMenu extends HTMLElement {
                     }
                 });
             }
+
+            $('.fa-info-circle').click(async function () {
+                $('#info-box').dialog({
+                    title: "Information",
+                    draggable: true,
+                    width: 700
+                });
+
+                let path = window.location.hash.substr(1).split("/");
+                path = path[1];
+                $("#info-box").load(`sampleData/${path}.html`, function (response, status, xhr) {
+                    if (status == "error") {
+                        $("#info-box").html("There is currently no documentation for this section.");
+                    }
+                });
+            });
         });
 
         this.innerHTML = `
@@ -79,8 +95,9 @@ top-menu ul li {
     position: relative;
 }
 
-top-menu ul li a {
+top-menu ul li a, top-menu ul li {
     color: #848484;
+    cursor:pointer;
 }
 
 .dropdown-container {
@@ -249,16 +266,16 @@ top-menu ul li a {
                                     </ul>
                                 </div>
                             </li>
+                            <li><i class="fa fa-info-circle"></i></li>
                             <li><a href="#/settings/index"><i class="fa fa-gears"></i></a></li>
                             <li><i class="fa fa-sign-out"></i></li>
-                            <!--
-                            <li>
-                                <a href=""><img src="img/default.gif" class="profile-pic-small user-image-small" alt="User Image"><span>Glen</span></a>
-                            </li>
-                            <li><a href="#/settings"><i class="fa fa-gears"></i></a></li> -->
                         </ul>
                     </div>
-                </div>`;
+                </div>
+<div id="info-box" style="display:none">
+</div>
+
+`;
     }
 }
 

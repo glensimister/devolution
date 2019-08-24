@@ -1,16 +1,14 @@
 import {editPost} from '../functions/editPost.js';
 import {deletePost} from '../functions/deletePost.js';
 import {getDate} from '../../../js/api/getDate.js';
-import {API_readProfile, API_readSampleData} from '../../../js/api/profileData.js';
+import {API_readSampleData} from '../../../js/api/profileData.js';
 
 class DisplayPosts extends HTMLElement {
     async connectedCallback() {
         let html = "";
         let postType = "post-desc";
         let isComment = "";
-        let profile = await API_readProfile();
         let sampleData = await API_readSampleData();
-        console.log(sampleData);
             for (let i = 0; i < (sampleData.posts.length); i++) {
                 if (i > 0) {
                     postType = "comment";
@@ -21,8 +19,8 @@ class DisplayPosts extends HTMLElement {
                     <i class="fa fa-close delete-post"></i>
                     <i class="fa fa-pencil edit-post"></i>
                     <div class="post-body">
-                    <img src="${profile.picture}" class="user-image-medium" alt="User Image">
-                    <span><a class="webId" >${profile.name}</a><br /><span class="date">${sampleData.posts[i].postDate}</span></span>
+                    <img src="${sampleData.posts[i].photo}" class="user-image-medium" alt="User Image">
+                    <span><a class="webId" >${sampleData.posts[i].author}</a><br /><span class="date">${sampleData.posts[i].postDate}</span></span>
                     <div class="${postType}">${sampleData.posts[i].body}</div></div>
                             <tool-bar></tool-bar>
                     <div class="post-comment">
@@ -31,7 +29,7 @@ class DisplayPosts extends HTMLElement {
                 </div>`;
                 
             }
-            editPost();
+            editPost(); // these should be self-executing
             deletePost();
 
         this.innerHTML = `
@@ -111,7 +109,6 @@ class DisplayPosts extends HTMLElement {
 ${html}`;
 
     }
-
 }
 
 customElements.define('display-posts', DisplayPosts);

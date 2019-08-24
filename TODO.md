@@ -1,5 +1,6 @@
 TO DO LIST
 
+DEVOLUTION 
 * style browser toolbar profile dialog 
 * put all api functions in same file
 * shift as many css style into web components as possible
@@ -31,7 +32,9 @@ TO DO LIST
 * add sub categories to home page select box (e.g. NEWS > POLITICS > UK > ETC) 
 * change responsive menu to select box + sort out all other responsive stuff
 * change media queries to "mobile last" cos i'm getting confused. 
-*
-*
-*
+
+PROFILE
+* show edit icons only if user is logged in
+* add registration form and add multiple choice questions which the user can specify
+* improve intro
 *
