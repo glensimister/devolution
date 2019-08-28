@@ -56,7 +56,7 @@ profile-widget x-star-rating {
             <h4 id="fullName">Glen Simister</h4>
             <div class="profile-pic">
                 <!-- the image needs to be cropped and centered -->
-                <img src="${profile.picture}" class="user-image-large animated rotateIn" alt="User Image">
+                <img src="img/user1-128x128.jpg" class="user-image-large animated rotateIn" alt="User Image">
             </div>
 
             <ul>
