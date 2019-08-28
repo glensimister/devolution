@@ -7,7 +7,7 @@ class ProfileWidget extends HTMLElement {
 
     async connectedCallback() {
 
-        let profile = await API_readProfile();
+        //let profile = await API_readProfile();
 
          /*const shadowRoot = this.attachShadow({
             mode: 'open'
