@@ -1,6 +1,7 @@
 TO DO LIST
 
 DEVOLUTION 
+* replace all instances of safecoin and IDX with £
 * clear out all unused pages (html, css, JS)
 * improve favicon
 * try to get rid of jquery so that the web components have less dependancies
@@ -9,7 +10,6 @@ DEVOLUTION
 * shift as many css style into web components as possible
 * do some research into different login solutions
 * do some research into netlify/AWS lambda. Perhaps I can ask users to register an account, and install the profile. This will interact with devolution.
-* get rid of all instances of rateYo
 * add photos to photos tab
 * change connections to friends to be more consistent with other platforms
 * make ratings unwritable (remove hover/click)
@@ -37,4 +37,4 @@ PROFILE
 * show edit icons only if user is logged in
 * add registration form and add multiple choice questions which the user can specify
 * improve intro
-*
+* move this into profile TO DO
