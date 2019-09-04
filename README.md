@@ -1,6 +1,8 @@
 <h3>DEVOLUTION</h3>
 
-<h3>You can view a <a href="https://glensimister.github.io/devolution/">DEMO</a> here although you will need a Solid Pod to login.</h3>
+<p>This app is very much under construction.</p>
+
+<h3>You can view a <a href="https://glensimister.github.io/devolution/">DEMO</a> here although it may not render that well on older browsers.</h3>
 <p>
 There's also a youtube video...
 </p>
@@ -12,7 +14,7 @@ There's also a youtube video...
 
 <p>The app (screenshot below) has sections for voting, financing public services, collectively buying and renting out land. It has an affordable housing section, an education section, and a whole lot more.</p>
 
-<p>The app is very much under construction and I would greatly appreciate some support. The prototype (as presented in the video) was built using the Safenetwork browser/api. However, I have decided to switch to a more a centralized approach for now to make it easier to develop. As it stands, i'm using Solid and GunDB, which may be subject to change.</p>
+<p>The prototype (as presented in the video) was built using the Safenetwork browser/api. However, for now at least, I have decided to switch to a more a centralized approach to make it easier to develop.</p>
 <p><img src="Capture.PNG" /></p>
 
 
